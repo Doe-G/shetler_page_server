@@ -1,8 +1,7 @@
 #!/bin/bash
 
-certbot certonly --webroot \
-                  --webroot-path=/var/www/html \
-                  --email gabriel.egallardor@gmail.com \
+certbot certonly  --email gabriel.egallardor@gmail.com \
+                  --nginx \
                   --agree-tos \
                   --no-eff-email \
                   --staging \
@@ -11,9 +10,8 @@ certbot certonly --webroot \
 
 
 if [$?]; then 
-  certbot certonly --webroot \
-                    --webroot-path=/var/www/html \
-                    --email gabriel.egallardor@gmail.com \
+  certbot certonly  --email gabriel.egallardor@gmail.com \
+                    --nginx \
                     --agree-tos \
                     --no-eff-email \
                     --force-renewal \
